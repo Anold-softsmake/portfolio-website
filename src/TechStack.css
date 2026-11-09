@@ -1,0 +1,99 @@
+.skills-showcase.tech-stack-showcase {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 28px;
+}
+
+.tech-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tech-stack-card {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  min-height: 138px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 8px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: linear-gradient(150deg, var(--surface-2), var(--surface));
+  box-shadow: inset 0 0 18px rgb(185 255 74 / 3%);
+  text-align: center;
+  transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+}
+
+.tech-stack-card:hover {
+  transform: translateY(-2px);
+  border-color: rgb(185 255 74 / 44%);
+  box-shadow: 0 0 18px rgb(185 255 74 / 9%);
+}
+
+.tech-stack-mark {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex: none;
+  place-items: center;
+  font: 700 17px/1 'Space Grotesk', sans-serif;
+}
+
+.tech-stack-mark img {
+  display: block;
+  object-fit: contain;
+}
+
+.tech-stack-icon--monochrome {
+  filter: brightness(0) invert(1);
+}
+
+.tech-stack-mark--javascript {
+  border-radius: 3px;
+  color: #171404;
+  background: #f7df1e;
+}
+
+.tech-stack-mark--node {
+  border: 1px solid #81b978;
+  border-radius: 7px;
+  color: #a2dd99;
+  font-size: 13px;
+}
+
+.tech-stack-card strong {
+  font: 700 14px/1.2 'Space Grotesk', sans-serif;
+}
+
+.tech-stack-description {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 1050px) {
+  .tech-stack-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+  .tech-stack-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 520px) {
+  .tech-stack-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-stack-card:hover {
+    transform: none;
+  }
+}
