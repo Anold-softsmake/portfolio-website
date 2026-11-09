@@ -116,6 +116,28 @@ export function Projects({ onPointerMove }) {
             </div>
           </div>
         </article>
+
+        <article className="project-card reveal" onPointerMove={onPointerMove}>
+          <div className="project-preview roadsense-preview" aria-hidden="true">
+            <svg viewBox="0 0 140 216" fill="none">
+              <rect x="12" y="2" width="116" height="212" rx="20" fill="#0b1213" stroke="#52635a" strokeWidth="2" />
+              <rect x="21" y="22" width="98" height="172" rx="10" fill="#13211e" />
+              <path d="M23 64L116 87M25 119L116 144M42 25L28 191M96 25L78 192" stroke="#2d443d" strokeWidth="2" />
+              <path d="M36 161L56 140L54 103L87 77L101 53" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+              <circle cx="36" cy="161" r="5" fill="#13211e" stroke="currentColor" strokeWidth="2" />
+              <circle cx="87" cy="77" r="5" fill="#13211e" stroke="currentColor" strokeWidth="2" />
+              <path d="M63 12H77M59 204H81" stroke="#52635a" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+            <span className="preview-index">04</span>
+          </div>
+          <div className="project-content">
+            <div className="project-heading"><span>ROAD HAZARD MAPPING</span><a href="https://github.com/054Dev/roadsense-pwa" target="_blank" rel="noopener" aria-label="Open RoadSense on GitHub">↗</a></div>
+            <h3>RoadSense</h3>
+            <p>RoadSense maps potholes and rough roads reported by a Raspberry Pi Pico WH. I built a responsive dashboard prototype with interactive hazard pins and a feed of sample detections.</p>
+            <div className="project-tags"><span>React</span><span>Vite</span><span>Capacitor</span><span>Raspberry Pi Pico WH</span></div>
+            <div className="project-links"><a href="https://github.com/054Dev/roadsense-pwa" target="_blank" rel="noopener" aria-label="RoadSense on GitHub">GitHub <b>↗</b></a></div>
+          </div>
+        </article>
       </div>
     </section>
   );

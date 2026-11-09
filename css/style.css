@@ -220,7 +220,7 @@ button{font:inherit}
  .unique-hero::after{width:300px;height:300px}
 }
 /* Premium project cards */
-.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 .project-card{background:linear-gradient(145deg,#111419,#0c0e11);border:1px solid var(--line);overflow:hidden;transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}
 .project-card:hover{transform:translateY(-8px);border-color:#3c444d;box-shadow:0 28px 70px rgba(0,0,0,.38)}
 .project-preview{height:275px;position:relative;overflow:hidden;background:#0a0c0f}
@@ -243,6 +243,8 @@ button{font:inherit}
 .calc-screen{border:1px solid #2a3037;background:#080a0c;padding:18px;height:115px;display:flex;flex-direction:column;justify-content:space-between}
 .calc-screen small{font:8px monospace;color:var(--accent);letter-spacing:1px}.calc-screen strong{font:700 27px monospace}.calc-screen span{font:10px monospace;color:#69717a}
 .calc-keys{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:10px}.calc-keys i{font:700 9px monospace;font-style:normal;text-align:center;padding:10px 2px;background:#171b20;border:1px solid #252b32;color:#9da4ad}
+.roadsense-preview{display:grid;place-items:center;background:radial-gradient(ellipse at center,#1b3128,#0b1213 72%);color:var(--accent)}
+.roadsense-preview svg{height:80%;max-width:100%}
 .project-content{padding:25px 25px 27px}
 .project-heading{display:flex;justify-content:space-between;align-items:center;color:var(--accent);font:9px monospace;letter-spacing:1.5px}
 .project-heading a{font-size:18px;color:#9da4ad;transition:.2s}.project-heading a:hover{color:var(--accent)}
@@ -252,8 +254,7 @@ button{font:inherit}
 .project-links{display:flex;gap:20px;margin-top:22px;padding-top:17px;border-top:1px solid #242930}
 .project-links a{font-size:10px;text-transform:uppercase;letter-spacing:1.2px;font-weight:700;color:#dce1e5}.project-links a:hover{color:var(--accent)}
 .project-links b{color:var(--accent);margin-left:5px}
-@media(max-width:900px){.project-grid{grid-template-columns:1fr 1fr}.project-card:last-child{grid-column:1/-1;max-width:calc(50% - 9px)}}
-@media(max-width:650px){.project-grid{grid-template-columns:1fr}.project-card:last-child{grid-column:auto;max-width:none}.project-preview{height:245px}.project-content p{min-height:auto}}
+@media(max-width:650px){.project-grid{grid-template-columns:1fr}.project-preview{height:245px}.project-content p{min-height:auto}}
 
 /* Technical stack showcase */
 .skills-showcase{display:grid;grid-template-columns:1fr 1fr;gap:18px}
